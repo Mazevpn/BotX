@@ -1,7 +1,6 @@
 {
-  "name": "XNEWBIE XBot",
+  "name": "X-Newbie XBot",
   "description": "[XBot] A modular Telegram userbot running on Python 3.8",
-  ""logo": "https://telegra.ph/file/5e179e0bbc8715b03d198.jpg",
   "keywords": [
     "telegram",
     "userbot",
@@ -154,12 +153,18 @@
     },
     "QUOTES_API_TOKEN": {
       "description": "API for quotes module get it from http://antiddos.systems",
-      "required": false
+      "value": ""
     },
     "LOGSPAMMER": {
       "description": "Set this to True in case you want the error logs to be stored in the userbot log group, instead of spitting out the file in the current chat, requires a valid BOTLOG_CHATID to be set.",
       "value": "True"
-    }
+
+    },
+    "DEEZER_ARL_TOKEN": {
+      "description": "Input your DEEZER ARL TOKEN",
+      "value": "",
+      "required": false
+    }  
   },
   "addons": [
     {
