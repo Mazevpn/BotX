@@ -329,7 +329,7 @@ async def get_pack_info(event):
     await event.edit(OUTPUT)
 
 
-@register(outgoing=True, pattern="^.getsticker$")
+@register(outgoing=True, pattern="^.get$")
 async def sticker_to_png(sticker):
     if not sticker.is_reply:
         await sticker.edit("`NULL information to feftch...`")
