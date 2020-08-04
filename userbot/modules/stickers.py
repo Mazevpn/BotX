@@ -254,7 +254,6 @@ async def kang(args):
 
         await args.edit(f"`Stiker Berhasil Di Colong!`\n \n[Klik Disini!](t.me/addstickers/{packname})Jika Ingin Menggunakan Stikernya Boss",
                         parse_mode='md')
-        )
 
 
 async def resize_photo(photo):
@@ -354,17 +353,16 @@ async def sticker_to_png(sticker):
 
 CMD_HELP.update(
     {
-        "stickers": ".get\
-\nUsage: Reply .get or .kang to a sticker or an image to kang it to your userbot pack.\
-\n\n.get/.kang [emoji('s)]\
-\nUsage: Works just like .get but uses the emoji('s) you picked.\
-\n\n.get/.kang [number]\
-\nUsage: Kang's the sticker/image to the specified pack but uses ◾ as emoji.\
-\n\n.get/.kang [emoji('s)] [number]\
-\nUsage: Kang's the sticker/image to the specified pack and uses the emoji('s) you picked.\
-\n\n.stkrinfo\
-\nUsage: Gets info about the sticker pack.\
-\n\n.getsticker\
-\nUsage: Convert sticker to PNG."
+"stickers":
+    ">`.colong [emoji('s)]?`"
+    "\nUsage: Reply .kang to a sticker or an image to kang it to your userbot pack "
+    "\nor specify the emoji you want to."
+    "\n\n>`.colong (emoji['s]]?` [number]?"
+    "\nUsage: Kang's the sticker/image to the specified pack but uses 🤔 as emoji "
+    "or choose the emoji you want to."
+    "\n\n>`.stkrinfo`"
+    "\nUsage: Gets info about the sticker pack."
+    "\n\n>`.get`"
+    "\nUsage: reply to a sticker to get 'PNG' file of sticker."
     }
 )
