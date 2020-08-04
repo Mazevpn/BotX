@@ -74,7 +74,7 @@ HEROKU_API_KEY = os.environ.get("HEROKU_API_KEY", None)
 # Custom (forked) repo URL for updater.
 UPSTREAM_REPO_URL = os.environ.get(
     "UPSTREAM_REPO_URL",
-    "https://github.com/adekmaulana/ProjectBish.git")
+    "https://github.com/X-Newbie/BotX.git")
 # UPSTREAM_REPO_URL branch, the default is master
 UPSTREAM_REPO_BRANCH = os.environ.get(
     "UPSTREAM_REPO_BRANCH", "master")
@@ -114,6 +114,11 @@ YOUTUBE_API_KEY = os.environ.get("YOUTUBE_API_KEY", None)
 
 # Default .alive name
 ALIVE_NAME = os.environ.get("ALIVE_NAME", None)
+
+# Default .alive logo
+ALIVE_LOGO = os.environ.get(
+    "ALIVE_LOGO",
+    "https://telegra.ph/file/6a89201333f4d6d004179.jpg")
 
 # Time & Date - Country and Time Zone
 COUNTRY = str(os.environ.get("COUNTRY", ""))
