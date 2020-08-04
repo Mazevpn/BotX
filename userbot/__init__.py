@@ -54,25 +54,39 @@ API_KEY = os.environ.get("API_KEY", None)
 API_HASH = os.environ.get("API_HASH", None)
 
 
-# Deezloader
-DEEZER_ARL_TOKEN = os.environ.get("DEEZER_ARL_TOKEN") or None
-
 # Userbot Session String
 STRING_SESSION = os.environ.get("STRING_SESSION", None)
 
 # Logging channel/group ID configuration.
 BOTLOG_CHATID = int(os.environ.get("BOTLOG_CHATID", None))
-LOGSPAMMER = sb(os.environ.get("LOGSPAMMER", "False"))
 
 # Userbot logging feature switch.
-BOTLOG = sb(os.environ.get("BOTLOG", "False"))
+BOTLOG = sb(os.environ.get("BOTLOG", "True"))
+LOGSPAMMER = sb(os.environ.get("LOGSPAMMER", "False"))
+
+# Default .alive name
+ALIVE_NAME = os.environ.get("ALIVE_NAME", None)
+
+# Default .alive logo
+ALIVE_LOGO = os.environ.get(
+    "ALIVE_LOGO",
+    "https://telegra.ph/file/6a89201333f4d6d004179.jpg")
 
 # Bleep Blop, this is a bot ;)
 PM_AUTO_BAN = sb(os.environ.get("PM_AUTO_BAN", "False"))
 
+# Send .chatid in any group with all your administration bots (added)
+G_BAN_LOGGER_GROUP = os.environ.get("G_BAN_LOGGER_GROUP", None)
+if G_BAN_LOGGER_GROUP:
+        G_BAN_LOGGER_GROUP = int(G_BAN_LOGGER_GROUP)
+
 # Heroku Credentials for updater.
 HEROKU_APP_NAME = os.environ.get("HEROKU_APP_NAME", None)
 HEROKU_API_KEY = os.environ.get("HEROKU_API_KEY", None)
+
+# Github Credentials for updater and Gitupload.
+GIT_REPO_NAME = os.environ.get("GIT_REPO_NAME", None)
+GITHUB_ACCESS_TOKEN = os.environ.get("GITHUB_ACCESS_TOKEN", None)
 
 # Custom (forked) repo URL for updater.
 UPSTREAM_REPO_URL = os.environ.get(
@@ -93,9 +107,6 @@ OCR_SPACE_API_KEY = os.environ.get("OCR_SPACE_API_KEY", None)
 
 # Telegraph
 TELEGRAPH_SHORT_NAME = os.environ.get("TELEGRAPH_SHORT_NAME", None)
-
-# Default .alive name
-ALIVE_NAME = os.environ.get("ALIVE_NAME", None)
 
 # remove.bg API key
 REM_BG_API_KEY = os.environ.get("REM_BG_API_KEY", None)
@@ -118,10 +129,8 @@ YOUTUBE_API_KEY = os.environ.get("YOUTUBE_API_KEY", None)
 # Default .alive name
 ALIVE_NAME = os.environ.get("ALIVE_NAME", None)
 
-# Default .alive logo
-ALIVE_LOGO = os.environ.get(
-    "ALIVE_LOGO",
-    "https://telegra.ph/file/6a89201333f4d6d004179.jpg")
+# Inline bot
+BOT_TOKEN = os.environ.get("BOT_TOKEN", None)
 
 # Time & Date - Country and Time Zone
 COUNTRY = str(os.environ.get("COUNTRY", ""))
@@ -155,6 +164,10 @@ G_DRIVE_AUTH_TOKEN_DATA = os.environ.get("G_DRIVE_AUTH_TOKEN_DATA", None)
 G_DRIVE_FOLDER_ID = os.environ.get("G_DRIVE_FOLDER_ID", None)
 TEMP_DOWNLOAD_DIRECTORY = os.environ.get("TMP_DOWNLOAD_DIRECTORY",
                                          "./downloads")
+                                         
+# Zipfile module
+ZIP_DOWNLOAD_DIRECTORY = os.environ.get("ZIP_DOWNLOAD_DIRECTORY",
+                                         "./zips")                                         
 
 # Terminal Alias
 TERM_ALIAS = os.environ.get("TERM_ALIAS", None)
@@ -164,6 +177,9 @@ GENIUS = os.environ.get("GENIUS_ACCESS_TOKEN", None)
 
 # Quote
 QUOTES_API_TOKEN = os.environ.get("QUOTES_API_TOKEN", None)
+
+# Deezloader
+DEEZER_ARL_TOKEN = os.environ.get("DEEZER_ARL_TOKEN", None)
 
 # Setting Up CloudMail.ru and MEGA.nz extractor binaries,
 # and giving them correct perms to work properly.
@@ -215,8 +231,17 @@ async def check_botlog_chatid():
         quit(1)
 
 
+with bot:
+    try:
+        bot.loop.run_until_complete(check_botlog_chatid())
+    except:
+        LOGS.info(
+            "BOTLOG_CHATID environment variable isn't a "
+            "valid entity. Check your environment variables/config.env file.")
+        quit(1)
+
 async def check_alive():
-    await bot.send_message(BOTLOG_CHATID, f"`OK, XBOT TELAH AKTIF...`")
+    await bot.send_message(BOTLOG_CHATID, f"`OK, XBOT BERHASIL DIAKTIFKAN..`")
     return
 
 with bot:
