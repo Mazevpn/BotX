@@ -215,15 +215,6 @@ async def check_botlog_chatid():
         quit(1)
 
 
-with bot:
-    try:
-        bot.loop.run_until_complete(check_botlog_chatid())
-    except:
-        LOGS.info(
-            "BOTLOG_CHATID environment variable isn't a "
-            "valid entity. Check your environment variables/config.env file.")
-        quit(1)
-
 async def check_alive():
     await bot.send_message(BOTLOG_CHATID, f"`OK, XBOT TELAH AKTIF...`")
     return
