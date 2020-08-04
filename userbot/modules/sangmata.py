@@ -7,7 +7,7 @@ from userbot import CMD_HELP, bot
 from userbot.events import register
 
 
-@register(outgoing=True, pattern=r"^\.sg(?: |$)(.*)")
+@register(outgoing=True, pattern=r"^\.sm(?: |$)(.*)")
 async def _(event):
     if event.fwd_from:
         return
@@ -45,7 +45,7 @@ async def _(event):
 
 CMD_HELP.update(
     {
-        "sangmata": ">`.sg` \
+        "sangmata": ">`.sm` \
           \nUsage: View user history.\n"
     }
 )
