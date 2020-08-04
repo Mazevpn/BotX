@@ -138,16 +138,13 @@ def register(**args):
                     file.write(ftext)
                     file.close()
 
+
                     if LOGSPAMMER:
-                        await check.client.respond(
+                        await check.respond(
                             "`Sorry, my userbot has crashed."
                             "\nThe error logs are stored in the userbot's log chat.`"
                         )
 
-                    await check.client.send_file(send_to,
-                                                 "error.log",
-                                                 caption=text)
-                    remove("error.log")
             else:
                 pass
 
@@ -155,5 +152,4 @@ def register(**args):
             bot.add_event_handler(wrapper, events.MessageEdited(**args))
         bot.add_event_handler(wrapper, events.NewMessage(**args))
         return wrapper
-
     return decorator
