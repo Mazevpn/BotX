@@ -19,7 +19,7 @@ hachoir
 heroku3
 httplib2
 humanize
-jinkapy
+jikanpy
 lxml
 oauth2client
 Pillow
