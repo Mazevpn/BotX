@@ -36,7 +36,7 @@ async def gen_chlog(repo, diff):
 
 async def print_changelogs(event, ac_br, changelog):
     changelog_str = (
-        f'**New UPDATE available for [{ac_br}]:\n\nCHANGELOG:**\n`{changelog}`'
+        f'**UPDATE Terbaru Untuk XBOT [{ac_br}]:\n\nPERUBAHAN:**\n`{changelog}`'
     )
     if len(changelog_str) > 4096:
         await event.edit("`Changelog is too big, view the file to see it.`")
@@ -196,7 +196,7 @@ async def upstream(event):
 
     if changelog == '' and force_update is False:
         await event.edit(
-            '\n`Your USERBOT is`  **up-to-date**  `with`  '
+            '\n`XBOT Mu Sudah`  **Versi_Terbaru**  `Dengan Base`  '
             f'**{UPSTREAM_REPO_BRANCH}**\n')
         return repo.__del__()
 
@@ -204,7 +204,7 @@ async def upstream(event):
         await print_changelogs(event, ac_br, changelog)
         await event.delete()
         return await event.respond(
-            '`do ".update now or .update deploy" to update.`')
+            '`Silahkan Ketik ".update now atau .update deploy" Untuk Mengupdate XBOT.`')
 
     if force_update:
         await event.edit(
