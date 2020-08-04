@@ -75,9 +75,6 @@ def register(**args):
             if check.via_bot_id and not insecure and check.out:
                 return
 
-            try:
-                await func(check)
-
             # Thanks to @kandnub for this HACK.
             # Raise StopPropagation to Raise StopPropagation
             # This needed for AFK to working properly
