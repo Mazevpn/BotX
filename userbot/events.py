@@ -75,6 +75,9 @@ def register(**args):
             if check.via_bot_id and not insecure and check.out:
                 return
 
+            try:
+                await func(check)
+
             # Thanks to @kandnub for this HACK.
             # Raise StopPropagation to Raise StopPropagation
             # This needed for AFK to working properly
@@ -135,12 +138,13 @@ def register(**args):
                     file.write(ftext)
                     file.close()
 
-              
 
-                    await check.client.send_file(send_to,
-                                                 "error.log",
-                                                 caption=text)
-                    remove("error.log")
+                    if LOGSPAMMER:
+                        await check.respond(
+                            "`Sorry, my userbot has crashed."
+                            "\nThe error logs are stored in the userbot's log chat.`"
+                        )
+
             else:
                 pass
 
@@ -148,5 +152,4 @@ def register(**args):
             bot.add_event_handler(wrapper, events.MessageEdited(**args))
         bot.add_event_handler(wrapper, events.NewMessage(**args))
         return wrapper
-
     return decorator
