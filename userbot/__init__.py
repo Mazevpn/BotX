@@ -54,6 +54,9 @@ API_KEY = os.environ.get("API_KEY", None)
 API_HASH = os.environ.get("API_HASH", None)
 
 
+# Deezloader
+DEEZER_ARL_TOKEN = os.environ.get("DEEZER_ARL_TOKEN") or None
+
 # Userbot Session String
 STRING_SESSION = os.environ.get("STRING_SESSION", None)
 
