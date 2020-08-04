@@ -39,7 +39,7 @@ justwatch
 jotquote
 lxml
 oauth2client
-pendulum==2.0.5
+pendulum
 Pillow>=6.0.0
 pip>=19.2.3
 psutil
@@ -61,7 +61,7 @@ patool
 pytz
 psutil
 qrcode
-requests>=2.18.4
+requests
 regex
 search-engine-parser
 speedtest-cli
