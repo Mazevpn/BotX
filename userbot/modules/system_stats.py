@@ -136,7 +136,6 @@ async def amireallyalive(alive):
              f"鈹`馃懁 🐍 `Python    :` v{python_version()}\n"
              f"鈹`馃懁 ⚙️ `Telethon  :` v{version.__version__}\n"
              f"鈹`馃懁 👤 `User      :` {DEFAULTUSER}\n"
-             f"鈹`馃晵 🕛 `Uptime        :` {uptime}\n"
              f"鈹忊攣鈹佲攣鈹佲攣鈹佲攣鈹佲攣鈹佲攣鈹佲攣鈹佲攣鈹佲攣\n")
     await bot.send_file(alive.chat_id, logo, caption=output)
     await alive.delete()
