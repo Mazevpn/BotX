@@ -98,7 +98,7 @@ async def repeat(rep):
 async def repo_is_here(wannasee):
     """ For .repo command, just returns the repo URL. """
     await wannasee.edit(
-        "GET [XBOT](https://github.com/X-Newbie/BotX) `BY ➳͜͡❂ᏚᏆ N͜͡ᎬᎳᏴᏆᎬ༈`\n========================\n"
+        "GET [XBOT](https://github.com/X-Newbie/BotX) `BY ➳͜͡❂ᏚᏆ N͜͡ᎬᎳᏴᏆᎬ༈`\n==========================\n"
     )
 
 
