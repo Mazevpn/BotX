@@ -81,11 +81,6 @@
       "description": "Set True Jika Anda membutuhkan verbosity pada logging konsol",
       "value": "False"
     },
-    "G_BAN_LOGGER_GROUP": {
-      "description": "isi samakan dengan BOTLOG CHAT ID.",
-      "value": "0"
-      "required": true
-    },
     "PM_AUTO_BAN": {
       "description": "Set True Jika Anda Ingin Auto Block Orang yg Spam Di Chat Anda.",
       "value": "False"
