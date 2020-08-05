@@ -129,8 +129,8 @@ async def update(event, repo, ups_rem, ac_br):
     except GitCommandError:
         repo.git.reset("--hard", "FETCH_HEAD")
     await update_requirements()
-    await event.edit('`Successfully Updated!\n'
-                     'Bot is restarting... Wait for a second!`')
+    await event.edit('`**XBOT** Berhasil Di Update!\n'
+                     '**XBOT** Di Restart... Silahkan Tunggu Beberapa Detik!`')
     # Spin a new instance of bot
     args = [sys.executable, "-m", "userbot"]
     execle(sys.executable, *args, environ)
@@ -196,7 +196,7 @@ async def upstream(event):
 
     if changelog == '' and force_update is False:
         await event.edit(
-            '\n`XBOT Mu Sudah`  **Versi_Terbaru**  `Dengan Base`  '
+            '\n`**XBOT** Sudah`  **Versi_Terbaru**  `Dengan Base`  '
             f'**{UPSTREAM_REPO_BRANCH}**\n')
         return repo.__del__()
 
@@ -210,7 +210,7 @@ async def upstream(event):
         await event.edit(
             '`Force-Syncing to latest stable userbot code, please wait...`')
     if conf == "now":
-        await event.edit('`Proses Meng-update XBOT Silahkan Tungu.....`')
+        await event.edit('`Proses Meng-update **XBOT** Silahkan Tungu.....`')
         await update(event, repo, ups_rem, ac_br)
     return
 
