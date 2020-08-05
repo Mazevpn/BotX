@@ -1,7 +1,8 @@
 {
   "name": "X-Newbie XBot",
   "description": "[XBot] A modular Telegram userbot running on Python 3.8",
-  "keywords": [
+  "logo": "https://telegra.ph/file/a4caae362380bc00508b0.jpg",
+"keywords": [
     "telegram",
     "userbot",
     "plugin",
