@@ -54,6 +54,11 @@ API_KEY = os.environ.get("API_KEY", None)
 API_HASH = os.environ.get("API_HASH", None)
 
 
+# Send .chatid in any group with all your administration bots (added)
+G_BAN_LOGGER_GROUP = os.environ.get("G_BAN_LOGGER_GROUP", None)
+if G_BAN_LOGGER_GROUP:
+        G_BAN_LOGGER_GROUP = int(G_BAN_LOGGER_GROUP)
+
 # Userbot Session String
 STRING_SESSION = os.environ.get("STRING_SESSION", None)
 
@@ -70,7 +75,7 @@ ALIVE_NAME = os.environ.get("ALIVE_NAME", None)
 # Default .alive logo
 ALIVE_LOGO = os.environ.get(
     "ALIVE_LOGO",
-    "https://telegra.ph/file/a4caae362380bc00508b0.jpg")
+    "https://telegra.ph/file/a092a1a7d4be7787b5a6d.jpg")
 
 # Bleep Blop, this is a bot ;)
 PM_AUTO_BAN = sb(os.environ.get("PM_AUTO_BAN", "False"))
