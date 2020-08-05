@@ -168,7 +168,6 @@
     "LOGSPAMMER": {
       "description": "Setel ini menjadi True jika Anda ingin log kesalahan disimpan dalam grup log userbot anda, alih-alih meludahkan file dalam obrolan saat ini, memerlukan BOTLOG_CHATID yang valid untuk disetel.",
       "value": "True"
-
     },
     "DEEZER_ARL_TOKEN": {
       "description": "masukan TOKEN DEEZER ARL",
@@ -180,7 +179,7 @@
     {
       "plan": "heroku-postgresql",
       "options": {
-        "version": "13"
+        "version": "12"
       }
     }
   ]
