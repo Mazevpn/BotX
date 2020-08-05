@@ -14,28 +14,28 @@
   "stack": "container",
   "env": {
     "API_KEY": {
-      "description": "Get this value from my.telegram.org.",
+      "description": "Dapatkan nilai ini dari my.telegram.org.",
       "required": true
     },
     "API_HASH": {
-      "description": "Get this value from my.telegram.org.",
+      "description": "Dapatkan nilai ini dari my.telegram.org.",
       "required": true
     },
     "ALIVE_NAME": {
-      "description": "Name to show in .alive message",
+      "description": "Nama yang akan ditampilkan dalam pesan .alive",
       "required": false
     },
     "STRING_SESSION": {
-      "description": "Get this value by running [python3 string_session.py] in Termux or local system.",
+      "description": "Dapatkan nilai ini dengan menjalankan [python3 string_session.py] di Termux atau sistem lokal.",
       "required": true
     },
     "HEROKU_API_KEY": {
-      "description": "Your Heroku API key, get it from 'https://dashboard.heroku.com/account'",
+      "description": "Temukan API KEY HEROKU di 'https://dashboard.heroku.com/account'",
       "value": "",
       "required": true
     },
     "HEROKU_APP_NAME": {
-      "description": "Add the Heroku app name here. It helps with userbot updates.",
+      "description": "Samakan Dengan Nama APP Heroku. Ini membantu jika ada pembaruan userbot.",
       "value": "",
       "required": true
     },
@@ -48,26 +48,26 @@
       "required": false
     },
     "COUNTRY": {
-      "description": "Set your Country to be used in the .time and .date commands.",
+      "description": "Set Default Negaramu untuk command .time dan .date",
       "required": false
     },
     "TZ_NUMBER": {
-      "description": "Change this value in case your country has multiple Time Zones.",
+      "description": "Ubah nilai ini jika negara Anda memiliki beberapa Zona Waktu..",
       "value": "1",
       "required": false
     },
     "CHROME_DRIVER": {
-      "description": "ChromeDriver location for selenium based modules.",
+      "description": "ChromeDriver location for selenium based modules [Biarkan Default]",
       "value": "/usr/bin/chromedriver",
       "required": false
     },
     "GOOGLE_CHROME_BIN": {
-      "description": "Google Chrome (or) Chromium binary location for selenium based modules.",
+      "description": "Google Chrome (or) Chromium binary location for selenium based modules. [Biarkan Default]",
       "value": "/usr/bin/chromium-browser",
       "required": false
     },
     "OPEN_WEATHER_MAP_APPID": {
-      "description": "Get your own APPID (API key)from https://api.openweathermap.org/data/2.5/weather",
+      "description": "Dapatkan OPEN_WEATHER_MAP_APPID di https://api.openweathermap.org/data/2.5/weather",
       "required": false
     },
     "BOTLOG": {
@@ -79,27 +79,28 @@
       "value": "0"
     },
     "CONSOLE_LOGGER_VERBOSE": {
-      "description": "If you need verbosity on the console logging",
+      "description": "Set True Jika Anda membutuhkan verbosity pada logging konsol",
       "value": "False"
     },
     "G_BAN_LOGGER_GROUP": {
-      "description": "Add all sudo bots in your group and type id of that group.",
-      "required": false
+      "description": "isi samakan dengan BOTLOG CHAT ID.",
+      "value": "0"
+      "required": true
     },
     "PM_AUTO_BAN": {
-      "description": "PM Auto-Ban Feature Switch. Also known as the 'bleep blop, this is a bot...' module.",
+      "description": "Set True Jika Anda Ingin Auto Block Orang yg Spam Di Chat Anda.",
       "value": "False"
     },
     "YOUTUBE_API_KEY": {
-      "description": "YouTube Data API Key for .yt command. Get from https://console.cloud.google.com",
+      "description": "Dapatkan YOUTUBE API KEY di https://console.cloud.google.com",
       "required": false
     },
     "OCR_SPACE_API_KEY": {
-      "description": "OCR API Key for .ocr command. Get from https://ocr.space/ocrapi",
+      "description": "Dapatkan OCR API KEY di https://ocr.space/ocrapi",
       "required": false
     },
     "REM_BG_API_KEY": {
-      "description": "API Key for .rbg command. Get from https://www.remove.bg/api",
+      "description": "Dapatkan API Remove Background di https://www.remove.bg/api",
       "required": false
     },
     "ANTI_SPAMBOT": {
@@ -111,27 +112,27 @@
       "value": "False"
     },
     "TMP_DOWNLOAD_DIRECTORY": {
-      "description": "Download location for many modules (GDrive, .download etc..)",
+      "description": "Lokasi Unduhan Untuk Beberapa Module (GDrive, .download etc..)",
       "value": "./downloads/"
     },
     "CLEAN_WELCOME": {
-      "description": "When a new person joins, the old welcome message is deleted.",
+      "description": "Ketika orang baru bergabung, pesan selamat datang lama akan dihapus.",
       "value": "True"
     },
     "LASTFM_API": {
-      "description": "API Key for Last.FM module. [Get one from - https://www.last.fm/api/account/create]",
+      "description": "Dapatkan API Untuk Modul Last.FM di - https://www.last.fm/api/account/create]",
       "required": false
     },
     "LASTFM_SECRET": {
-      "description": "SECRET Key for Last.FM module. [Get one from - https://www.last.fm/api/account/create]",
+      "description": "Kunci SECRET untuk modul Last.FM. [Dapatkan satu dari - https://www.last.fm/api/account/create]",
       "required": false
     },
     "LASTFM_USERNAME": {
-      "description": "Last.FM Username",
+      "description": "Username Last.FM",
       "required": false
     },
     "LASTFM_PASSWORD": {
-      "description": "Last.FM Password",
+      "description": "Password Last.FM",
       "required": false
     },
     "BIO_PREFIX": {
@@ -141,36 +142,36 @@
     "DEFAULT_BIO": {
       "description": "Default profile bio.",
       "value": "PM = BLOCK 😈",
-      "required": false
+      "required": true
     },
     "G_DRIVE_DATA": {
       "description": "Your client_secret.json.",
       "required": false
     },
     "GENIUS_ACCESS_TOKEN": {
-      "description": "Client Access Token from https://genius.com/api-clients.",
+      "description": "Dapatkan Token Access di https://genius.com/api-clients.",
       "required": false
     },
     "WEATHER_DEFCITY": {
-      "description": "Set the default city for the userbot's weather module.",
+      "description": "Atur Default Kotamu Untuk Modul Cuaca Userbot.",
       "required": false
     },
     "TELEGRAPH_SHORT_NAME": {
-      "description": "For telegraph module",
+      "description": "Untuk Module Telegraph",
       "value": "0",
       "required": true
     },
     "QUOTES_API_TOKEN": {
-      "description": "API for quotes module get it from http://antiddos.systems",
+      "description": "Dapatkan API DI http://antiddos.systems",
       "value": ""
     },
     "LOGSPAMMER": {
-      "description": "Set this to True in case you want the error logs to be stored in the userbot log group, instead of spitting out the file in the current chat, requires a valid BOTLOG_CHATID to be set.",
+      "description": "Setel ini menjadi True jika Anda ingin log kesalahan disimpan dalam grup log userbot anda, alih-alih meludahkan file dalam obrolan saat ini, memerlukan BOTLOG_CHATID yang valid untuk disetel.",
       "value": "True"
 
     },
     "DEEZER_ARL_TOKEN": {
-      "description": "Input your DEEZER ARL TOKEN",
+      "description": "masukan TOKEN DEEZER ARL",
       "value": "",
       "required": false
     }  
